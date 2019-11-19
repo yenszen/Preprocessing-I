@@ -55,6 +55,58 @@ table {
 
 html, body {
 	height: 100%;
-	// background-color: red;
 }
 
+body {
+	width: 90%;
+	margin: 0 auto;
+
+	.flex {
+		display: flex;
+	}
+
+	header {
+		.flex();
+		justify-content: flex-end;
+
+		nav {
+			.flex();
+			justify-content: space-around;
+			width: 40%;
+			background-color: grey;
+			padding: 10px 0;
+			margin: 15px 0;
+
+			a {
+				text-decoration: none;
+				// color: rgb(11, 101, 236);
+		
+				// &:hover {
+				// 	opacity: 0.5;
+				// }
+			}
+		}
+	}
+
+	.intro {
+		.flex();
+		padding: 10px 0;
+		border: 2px solid black;
+		margin: 15px 0;
+	}
+
+	.middle {
+		.flex();
+		justify-content: space-between;
+
+		.skills {
+			border: 2px solid black;
+			width: 37.5%;
+		}
+
+		.work-history {
+			border: 2px solid black;
+			width: 60%;
+		}
+	}
+}

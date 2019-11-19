@@ -133,5 +133,44 @@ table {
 html,
 body {
   height: 100%;
-  background-color: red;
+}
+body {
+  width: 90%;
+  margin: 0 auto;
+}
+body .flex {
+  display: flex;
+}
+body header {
+  display: flex;
+  justify-content: flex-end;
+}
+body header nav {
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
+  background-color: grey;
+  padding: 10px 0;
+  margin: 15px 0;
+}
+body header nav a {
+  text-decoration: none;
+}
+body .intro {
+  display: flex;
+  padding: 10px 0;
+  border: 2px solid black;
+  margin: 15px 0;
+}
+body .middle {
+  display: flex;
+  justify-content: space-between;
+}
+body .middle .skills {
+  border: 2px solid black;
+  width: 37.5%;
+}
+body .middle .work-history {
+  border: 2px solid black;
+  width: 60%;
 }
