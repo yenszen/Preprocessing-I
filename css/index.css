@@ -134,43 +134,71 @@ html,
 body {
   height: 100%;
 }
-body {
+.background {
+  background-image: linear-gradient(blue, lightblue, green);
+}
+.container {
   width: 90%;
   margin: 0 auto;
 }
-body .flex {
+.container .flex {
   display: flex;
 }
-body header {
+.container h1 {
+  font-size: 4rem;
+}
+.container h2 {
+  font-size: 2rem;
+}
+.container p {
+  font-size: 1.1rem;
+}
+.container header {
   display: flex;
   justify-content: flex-end;
 }
-body header nav {
+.container header nav {
   display: flex;
   justify-content: space-around;
   width: 40%;
-  background-color: grey;
   padding: 10px 0;
   margin: 15px 0;
 }
-body header nav a {
+.container a {
   text-decoration: none;
+  color: gold;
 }
-body .intro {
+.container .intro {
   display: flex;
+  align-items: center;
+  justify-content: space-around;
   padding: 10px 0;
   border: 2px solid black;
   margin: 15px 0;
 }
-body .middle {
+.container .intro .intro-left {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  background-color: white;
+}
+.container .intro img {
+  width: 30%;
+}
+.container .middle {
   display: flex;
   justify-content: space-between;
 }
-body .middle .skills {
+.container .middle .skills {
   border: 2px solid black;
   width: 37.5%;
 }
-body .middle .work-history {
+.container .middle .work-history {
   border: 2px solid black;
   width: 60%;
+}
+.container footer {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
 }
