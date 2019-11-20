@@ -134,9 +134,6 @@ html,
 body {
   height: 100%;
 }
-.background {
-  background-image: linear-gradient(blue, lightblue, green);
-}
 .container {
   width: 90%;
   margin: 0 auto;
@@ -166,7 +163,7 @@ body {
 }
 .container a {
   text-decoration: none;
-  color: gold;
+  color: green;
 }
 .container .intro {
   display: flex;
@@ -196,9 +193,20 @@ body {
   height: 15rem;
 }
 .container .middle .skills {
+  border: 2px solid black;
   width: 37.5%;
 }
+.container .middle .skills th {
+  padding: 10px 0;
+}
+.container .middle .skills td {
+  padding: 10px;
+}
+.container .middle tr:nth-child(even) {
+  background-color: lightgrey;
+}
 .container .middle .work-history {
+  border: 2px solid black;
   width: 60%;
 }
 .container .bottom {
@@ -211,7 +219,7 @@ body {
 .container .bottom .socials {
   height: 15rem;
 }
-.container .bottom .contact {
+.container .bottom #contact {
   width: 70%;
   border: 2px solid black;
   display: flex;
@@ -219,21 +227,28 @@ body {
   justify-content: space-evenly;
   align-items: center;
 }
-.container .bottom .contact p {
-  border: 2px solid silver;
-  width: 25rem;
-  height: 2rem;
+.container .bottom #contact div {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-around;
+  width: 25rem;
 }
-.container .bottom .contact button {
+.container .bottom #contact input {
+  border: 2px solid silver;
+  width: 20rem;
+  height: 2rem;
+  padding-left: 5px;
+}
+.container .bottom #contact button {
   width: 15%;
   text-align: center;
 }
 .container .bottom .socials {
   width: 25%;
   border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 .container footer {
   display: flex;

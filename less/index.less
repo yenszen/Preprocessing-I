@@ -57,13 +57,14 @@ html, body {
 	height: 100%;
 }
 
-.background {
-	background-image: linear-gradient(blue, lightblue, green);
-}
+// .background {
+// 	background-image: linear-gradient(black, darkgrey);
+// }
 
 .container {
 	width: 90%;
 	margin: 0 auto;
+	// color: gold;
 
 	.flex {
 		display: flex;
@@ -82,7 +83,7 @@ html, body {
 	}
 
 	@border: 2px solid black;
-	@bright: gold;
+	@bright: green;
 	@padding: 0.625rem 0;
 	@margin: 2rem 0;
 	@height: 15rem;
@@ -141,12 +142,24 @@ html, body {
 		}
 
 		.skills {
-			// border: @border;
+			border: @border;
 			width: 37.5%;
+
+			th {
+				padding: 10px 0;
+			}
+	
+			td {
+				padding: 10px;
+			}
+		}
+
+		tr:nth-child(even) {
+			background-color: lightgrey;
 		}
 
 		.work-history {
-			// border: @border;
+			border: @border;
 			width: 60%;
 		}
 	}
@@ -161,7 +174,7 @@ html, body {
 			height: @height;
 		}
 
-		.contact {
+		#contact {
 			width: 70%;
 			border: @border;
 			.flex();
@@ -169,13 +182,18 @@ html, body {
 			justify-content: space-evenly;
 			align-items: center;
 
-			p {
-				border: 2px solid silver;
-				width: 25rem;
-				height: 2rem;
+			div {
+				// background: grey;
 				.flex();
-				justify-content: center;
-				align-items: center;
+				justify-content: space-around;
+				width: 25rem;
+			}
+
+			input {
+				border: 2px solid silver;
+				width: 20rem;
+				height: 2rem;
+				padding-left: 5px;
 			}
 
 			button {
@@ -187,6 +205,10 @@ html, body {
 		.socials {
 			width: 25%;
 			border: @border;
+			.flex();
+			flex-direction: column;
+			justify-content: space-around;
+			align-items: center;
 		}
 	}
 
