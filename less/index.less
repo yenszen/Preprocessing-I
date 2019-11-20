@@ -62,6 +62,7 @@ html, body {
 .container {
 	width: 90%;
 	margin: 0 auto;
+	font-family: 'Alata', sans-serif;
 
 	// MIX-INs ----------------------------------------------------
 	.flex {
@@ -73,17 +74,26 @@ html, body {
 	}
 
 	.hover {
-		@media(min-width: 500px) {
+		@media(min-width: 501px) {
 			&:hover {
 				.pop();
 			}
 		}
 	}
 
+	.select {
+		&:hover a {
+			opacity: 0.25;
+		}
+
+		&:hover a:hover {
+			opacity: 1;
+		}
+	}
+
 	// VARIABLES -------------------------------------------------
 
 	@outline: 2px solid #e6d698;
-	@bright: green;
 	@padding: 0.625rem 0;
 	@margin: 2rem 0;
 	@height: 15rem;
@@ -117,20 +127,26 @@ html, body {
 			width: 40%;
 			padding: @padding;
 			margin: @margin 0;
-			
-			&:hover {
-				opacity: 0.5;
-			}
 
 			@media(max-width: 500px) {
 				width: 100%;
 			}
+
+			.select();
+
+			// &:hover a {
+			// 	opacity: 0.25;
+			// }
+
+			// &:hover a:hover {
+			// 	opacity: 1;
+			// }
 		}
 	}
 
 	a {
 		text-decoration: none;
-		color: @bright;			
+		color: rgb(160, 13, 82);			
 	}
 
 	// INTRO ---------------------------------------------------------
@@ -169,6 +185,7 @@ html, body {
 	.middle {
 		.flex();
 		justify-content: space-between;
+		align-items: center;
 
 		tr:nth-child(even) {
 			background-color: #e6d698;
@@ -207,6 +224,10 @@ html, body {
 			@media(max-width: 500px) {
 				width: 100%;
 			}
+
+			.annoyance {
+				font-size: 1.25rem;
+			}
 		}
 	}
 
@@ -220,6 +241,8 @@ html, body {
 		@media(max-width: 500px) {
 			flex-direction: column;
 		}
+
+		height: 200px;
 
 		#contact {
 			width: 70%;
@@ -275,6 +298,7 @@ html, body {
 			justify-content: space-around;
 			align-items: center;
 			.hover();
+			.select();
 
 			@media(max-width: 500px) {
 				width: 100%;

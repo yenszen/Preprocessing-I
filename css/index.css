@@ -138,6 +138,7 @@ body {
 .container {
   width: 90%;
   margin: 0 auto;
+  font-family: 'Alata', sans-serif;
 }
 .container .flex {
   display: flex;
@@ -145,10 +146,16 @@ body {
 .container .pop {
   outline: 10px solid #e6d698;
 }
-@media (min-width: 500px) {
+@media (min-width: 501px) {
   .container .hover:hover {
     outline: 10px solid #e6d698;
   }
+}
+.container .select:hover a {
+  opacity: 0.25;
+}
+.container .select:hover a:hover {
+  opacity: 1;
 }
 .container h1 {
   font-size: 4rem;
@@ -175,17 +182,20 @@ body {
   padding: 0.625rem 0;
   margin: 2rem 0 0;
 }
-.container header nav:hover {
-  opacity: 0.5;
-}
 @media (max-width: 500px) {
   .container header nav {
     width: 100%;
   }
 }
+.container header nav:hover a {
+  opacity: 0.25;
+}
+.container header nav:hover a:hover {
+  opacity: 1;
+}
 .container a {
   text-decoration: none;
-  color: green;
+  color: #a00d52;
 }
 .container .intro {
   display: flex;
@@ -195,7 +205,7 @@ body {
   outline: 2px solid #e6d698;
   margin: 2rem 0;
 }
-@media (min-width: 500px) {
+@media (min-width: 501px) {
   .container .intro:hover {
     outline: 10px solid #e6d698;
   }
@@ -224,6 +234,7 @@ body {
 .container .middle {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .container .middle tr:nth-child(even) {
   background-color: #e6d698;
@@ -245,7 +256,7 @@ body {
   outline: 2px solid #e6d698;
   width: 37.5%;
 }
-@media (min-width: 500px) {
+@media (min-width: 501px) {
   .container .middle .skills:hover {
     outline: 10px solid #e6d698;
   }
@@ -260,7 +271,7 @@ body {
   outline: 2px solid #e6d698;
   width: 60%;
 }
-@media (min-width: 500px) {
+@media (min-width: 501px) {
   .container .middle .work-history:hover {
     outline: 10px solid #e6d698;
   }
@@ -270,11 +281,15 @@ body {
     width: 100%;
   }
 }
+.container .middle .work-history .annoyance {
+  font-size: 1.25rem;
+}
 .container .bottom {
   display: flex;
   justify-content: space-between;
   padding: 0.625rem 0;
   margin: 2rem 0;
+  height: 200px;
 }
 @media (max-width: 500px) {
   .container .bottom {
@@ -289,7 +304,7 @@ body {
   justify-content: space-evenly;
   align-items: center;
 }
-@media (min-width: 500px) {
+@media (min-width: 501px) {
   .container .bottom #contact:hover {
     outline: 10px solid #e6d698;
   }
@@ -336,10 +351,16 @@ body {
   justify-content: space-around;
   align-items: center;
 }
-@media (min-width: 500px) {
+@media (min-width: 501px) {
   .container .bottom #socials:hover {
     outline: 10px solid #e6d698;
   }
+}
+.container .bottom #socials:hover a {
+  opacity: 0.25;
+}
+.container .bottom #socials:hover a:hover {
+  opacity: 1;
 }
 @media (max-width: 500px) {
   .container .bottom #socials {
