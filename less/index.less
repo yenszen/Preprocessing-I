@@ -54,6 +54,264 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	background-color: cornsilk;
 }
 
+// CONTAINER ----------------------------------------------------
+.container {
+	width: 90%;
+	margin: 0 auto;
+	font-family: 'Alata', sans-serif;
+
+	// MIX-INs ----------------------------------------------------
+	.flex {
+		display: flex;
+	}
+
+	.pop {
+		outline: 10px solid #e6d698;
+	}
+
+	.hover {
+		@media(min-width: 501px) {
+			&:hover {
+				.pop();
+			}
+		}
+	}
+
+	.select {
+		&:hover a {
+			opacity: 0.25;
+		}
+
+		&:hover a:hover {
+			opacity: 1;
+		}
+	}
+
+	// VARIABLES -------------------------------------------------
+
+	@outline: 2px solid #e6d698;
+	@padding: 0.625rem 0;
+	@margin: 2rem 0;
+	@height: 15rem;
+
+	// GENERIC ---------------------------------------------------
+
+	h1 {
+		font-size: 4rem;
+	}
+
+	h2 {
+		font-size: 2rem;
+	}
+
+	h3 {
+		font-size: 1.25rem;
+	}
+
+	// HEADER ------------------------------------------------------
+	header {
+		.flex();
+		justify-content: flex-end;
+
+		@media(max-width: 500px) {
+			justify-content: center;
+		}
+
+		nav {
+			.flex();
+			justify-content: space-around;
+			width: 40%;
+			padding: @padding;
+			margin: @margin 0;
+
+			@media(max-width: 500px) {
+				width: 100%;
+			}
+
+			.select();
+
+			// &:hover a {
+			// 	opacity: 0.25;
+			// }
+
+			// &:hover a:hover {
+			// 	opacity: 1;
+			// }
+		}
+	}
+
+	a {
+		text-decoration: none;
+		color: rgb(160, 13, 82);			
+	}
+
+	// INTRO ---------------------------------------------------------
+	.intro {
+		.flex();
+		.hover();
+		align-items: center;
+		justify-content: space-around;
+		padding: @padding;
+		outline: @outline;
+		margin: @margin;
+
+		.intro-left {
+			.flex();
+			flex-direction: column;
+			justify-content: space-evenly;
+			align-items: center;
+			width: 60%;
+			height: @height;
+
+			@media(max-width: 500px) {
+				width: 90%;
+			}
+		}
+
+		img {
+			width: 25%;
+
+			@media(max-width: 500px) {
+				display: none;
+			}
+		}
+	}
+
+	// SKILLS & WORK HISTORY ------------------------------------------
+	.middle {
+		.flex();
+		justify-content: space-between;
+		align-items: center;
+
+		tr:nth-child(even) {
+			background-color: #e6d698;
+		}
+
+		th {
+			font-size: 1.5rem;
+			padding: 0.5em 0;
+		}
+
+		td {
+			padding: 0.5em 0 0.5em 10px;
+		}
+
+		@media(max-width: 500px) {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.skills {
+			outline: @outline;
+			width: 37.5%;
+			.hover();
+
+			@media(max-width: 500px) {
+				width: 100%;
+				margin-bottom: 20px;
+			}
+		}
+
+		.work-history {
+			outline: @outline;
+			width: 60%;
+			.hover();
+
+			@media(max-width: 500px) {
+				width: 100%;
+			}
+
+			.annoyance {
+				font-size: 1.25rem;
+			}
+		}
+	}
+
+	// CONTACTS & SOCIALS ----------------------------------------------
+	.bottom {
+		.flex();
+		justify-content: space-between;
+		padding: @padding;
+		margin: @margin;
+
+		@media(max-width: 500px) {
+			flex-direction: column;
+		}
+
+		height: 200px;
+
+		#contact {
+			width: 70%;
+			outline: @outline;
+			.flex();
+			flex-direction: column;
+			justify-content: space-evenly;
+			align-items: center;
+			.hover();
+
+			@media(max-width: 500px) {
+				width: 100%;
+				height: 130px;
+			}
+
+			div {
+				// background: grey;
+				.flex();
+				justify-content: space-around;
+				width: 30rem;
+
+				@media(max-width: 500px) {
+					width: 80%;
+					height: 80px;
+					flex-direction: column;
+					align-items: center;
+				}
+			}
+
+			input {
+				border: 2px solid silver;
+				width: 20rem;
+				height: 2rem;
+				padding-left: 5px;
+				background-color: rgb(231, 231, 231);
+				color: rgb(160, 13, 82);
+			}
+
+			button {
+				width: 25%;
+				text-align: center;
+				border-radius: 20px;
+				background-color: rgb(231, 231, 231);
+				color: rgb(160, 13, 82);
+			}
+		}
+
+		#socials {
+			width: 25%;
+			outline: @outline;
+			.flex();
+			flex-direction: column;
+			justify-content: space-around;
+			align-items: center;
+			.hover();
+			.select();
+
+			@media(max-width: 500px) {
+				width: 100%;
+				height: 100px;
+				margin-top: 20px;
+			}
+		}
+	}
+
+	// FOOTER
+	footer {
+		.flex();
+		justify-content: center;
+		padding: @padding;
+	}
+}
